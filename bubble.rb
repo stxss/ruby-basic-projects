@@ -1,6 +1,6 @@
 def bubble_sort(array)
     sorted = false
-    while !sorted do
+    until sorted do
         i = 0
         sorted = true
         while i < (array.length - 1)
