@@ -5,13 +5,17 @@ def bubble_sort(array)
         sorted = true
         while i < (array.length - 1)
             if array[i] > array[i + 1]
-                array[i], array[i + 1] = array[i + 1], array[i]
+                placeholder = array[i]
+                array[i] = array[i + 1]
+                array[i + 1] = placeholder
+                # or
+                # array[i], array[i + 1] = array[i + 1], array[i]
                 sorted = false
             end
             i += 1
         end
     end
-    print array
+    p array
 end
 
 
