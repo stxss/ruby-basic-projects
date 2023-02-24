@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 def substrings(string, dictionary)
-  arr = string.gsub(/[^a-zA-Z]/, ' ').downcase.split
+  arr = string.gsub(/[^a-zA-Z]/, " ").downcase.split
   result = Hash.new(0)
   dictionary.map do |word|
     arr.each do |chars|
@@ -12,5 +12,5 @@ def substrings(string, dictionary)
 end
 
 dictionary = %w[below down go going horn how howdy it i low own part partner sit]
-substrings('below', dictionary)
+substrings("below", dictionary)
 substrings("Howdy partner, sit down! How's it going?", dictionary)
